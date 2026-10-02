@@ -1,0 +1,39 @@
+{
+  "scale": {
+    "M0": "Unknown",
+    "M1": "Understands",
+    "M2": "Guided Performance",
+    "M3": "Independent Routine",
+    "M4": "Professional Judgment",
+    "M5": "Transfer & Strategy"
+  },
+  "dimensions": [
+    "Knowledge",
+    "Application",
+    "Judgment",
+    "Transfer",
+    "Independence"
+  ],
+  "evidence_rule": [
+    "KNOW",
+    "DO",
+    "JUDGE",
+    "REPEAT",
+    "TRANSFER"
+  ],
+  "competencies": [
+    "Procurement Foundations",
+    "Operational Execution",
+    "Commercial Awareness",
+    "Supplier Management",
+    "Sourcing",
+    "Negotiation",
+    "Contracting",
+    "Risk, Ethics & Compliance",
+    "Analytics",
+    "Stakeholder Management",
+    "Systems & Digital Procurement",
+    "Category & Strategic Thinking"
+  ],
+  "trust_gate_policy": "A trust gate requires evidence across multiple missions and contexts; one correct answer never unlocks responsibility."
+}
