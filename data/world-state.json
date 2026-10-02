@@ -1,0 +1,37 @@
+{
+  "company": "Novaris Systems Group",
+  "employee_count": 4800,
+  "revenue_eur": 1100000000,
+  "external_spend_eur": 420000000,
+  "learner": {
+    "role": "New Procurement Joiner",
+    "trust": 0,
+    "access": [
+      "inbox",
+      "company_map",
+      "people_directory",
+      "nova_erp_read_only"
+    ]
+  },
+  "persistent_state": {
+    "supplier_relationships": {},
+    "open_risks": [],
+    "decision_history": [],
+    "recovery_obligations": [],
+    "stakeholder_trust": {},
+    "mastery_evidence": []
+  },
+  "pr_10428": {
+    "requester": "Jonas Weber",
+    "function": "Production Planning",
+    "plant": "BRN-01 · Brno Assembly",
+    "item": "Industrial connectors",
+    "quantity": 24,
+    "uom": "EA",
+    "need_by": "Friday 14:00",
+    "preferred_supplier": "Helix Components",
+    "business_reason": "Assembly line replenishment",
+    "attached_note": "Line 3 stock below safety level.",
+    "approval_state": "Manager approved · Finance check pending"
+  }
+}
