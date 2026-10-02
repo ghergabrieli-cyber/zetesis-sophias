@@ -1,0 +1,199 @@
+{
+  "arc": "Trust 0 — Welcome to Novaris",
+  "trust_gate_after": "M012",
+  "missions": [
+    {
+      "id": "M001",
+      "title": "First Day",
+      "objective": "Understand Novaris before learning procurement vocabulary.",
+      "situation": "Elena asks the learner to trace a real business need across the company before defining Procurement.",
+      "evidence": [
+        "business_orientation",
+        "professional_curiosity",
+        "systems_thinking"
+      ],
+      "systems": [
+        "company_map",
+        "people_directory",
+        "nova_erp"
+      ],
+      "scaffolding": "high"
+    },
+    {
+      "id": "M002",
+      "title": "How Does This Company Make Money?",
+      "objective": "Connect customer demand, revenue, cost and profit.",
+      "situation": "Trace a customer order from commercial promise to operational delivery and external spend.",
+      "evidence": [
+        "business_literacy",
+        "cross_functional_reasoning"
+      ],
+      "systems": [
+        "sales_view",
+        "company_map"
+      ],
+      "scaffolding": "high"
+    },
+    {
+      "id": "M003",
+      "title": "Where Does The Product Come From?",
+      "objective": "Discover supply chain by tracing a product backwards.",
+      "situation": "Follow a Novaris control unit from customer shipment back through production, warehouse, logistics and suppliers.",
+      "evidence": [
+        "supply_chain_foundations",
+        "flow_reasoning"
+      ],
+      "systems": [
+        "warehouse_view",
+        "production_view",
+        "supplier_portal"
+      ],
+      "scaffolding": "high"
+    },
+    {
+      "id": "M004",
+      "title": "Who Does What?",
+      "objective": "Recognize where Procurement begins, ends and collaborates.",
+      "situation": "Six colleagues bring six problems. Route ownership correctly and identify cross-functional handoffs.",
+      "evidence": [
+        "functional_literacy",
+        "stakeholder_awareness"
+      ],
+      "systems": [
+        "people_directory",
+        "company_map"
+      ],
+      "scaffolding": "high"
+    },
+    {
+      "id": "M005",
+      "title": "Why Procurement?",
+      "objective": "Identify Procurement value beyond order placement.",
+      "situation": "Compare five business requests and decide where Procurement involvement adds value.",
+      "evidence": [
+        "procurement_purpose",
+        "value_thinking",
+        "judgment"
+      ],
+      "systems": [
+        "inbox",
+        "company_map"
+      ],
+      "scaffolding": "medium"
+    },
+    {
+      "id": "M006",
+      "title": "Procurement ≠ Purchasing",
+      "objective": "Distinguish transactional buying from the broader procurement lifecycle.",
+      "situation": "Two requests look alike. One is routine; one hides commercial, supplier and risk work.",
+      "evidence": [
+        "scope_recognition",
+        "information_seeking"
+      ],
+      "systems": [
+        "nova_erp",
+        "supplier_portal"
+      ],
+      "scaffolding": "medium"
+    },
+    {
+      "id": "M007",
+      "title": "Direct or Indirect?",
+      "objective": "Classify direct and indirect spend from business context.",
+      "situation": "Classify requirements from production, IT, marketing and facilities without relying on memorized labels.",
+      "evidence": [
+        "classification",
+        "business_context"
+      ],
+      "systems": [
+        "nova_erp"
+      ],
+      "scaffolding": "medium"
+    },
+    {
+      "id": "M008",
+      "title": "The Laptop",
+      "objective": "Separate requested solution from underlying business need.",
+      "situation": "A stakeholder asks for a premium laptop urgently. Discover the actual requirement before buying anything.",
+      "evidence": [
+        "requirement_discovery",
+        "question_quality",
+        "stakeholder_management"
+      ],
+      "systems": [
+        "inbox",
+        "catalog",
+        "people_directory"
+      ],
+      "scaffolding": "medium"
+    },
+    {
+      "id": "M009",
+      "title": "But I Need It Tomorrow",
+      "objective": "Handle urgency without bypassing governance blindly.",
+      "situation": "A genuine operational need conflicts with process timing and available stock.",
+      "evidence": [
+        "urgency_judgment",
+        "governance_awareness",
+        "professional_uncertainty"
+      ],
+      "systems": [
+        "nova_erp",
+        "warehouse_view",
+        "approval_flow"
+      ],
+      "scaffolding": "medium"
+    },
+    {
+      "id": "M010",
+      "title": "PR-10428",
+      "objective": "Read and investigate a purchase requisition.",
+      "situation": "PR-10428 requests 24 industrial connectors for Brno with a Friday need-by date.",
+      "evidence": [
+        "pr_literacy",
+        "data_reading",
+        "investigation"
+      ],
+      "systems": [
+        "nova_erp"
+      ],
+      "scaffolding": "medium"
+    },
+    {
+      "id": "M011",
+      "title": "Approved",
+      "objective": "Understand what approval does and does not mean.",
+      "situation": "A requisition shows manager approval but Finance check is pending. Determine what can happen next.",
+      "evidence": [
+        "approval_logic",
+        "process_reasoning",
+        "control_awareness"
+      ],
+      "systems": [
+        "nova_erp",
+        "approval_flow"
+      ],
+      "scaffolding": "low"
+    },
+    {
+      "id": "M012",
+      "title": "First Career Review",
+      "objective": "Demonstrate Trust 0 foundations without step-by-step prompting.",
+      "situation": "A mixed inbox tests whether the learner can orient, investigate, route and explain before acting.",
+      "evidence": [
+        "independence",
+        "transfer",
+        "business_orientation",
+        "procurement_foundations"
+      ],
+      "systems": [
+        "inbox",
+        "nova_erp",
+        "company_map",
+        "people_directory"
+      ],
+      "scaffolding": "low",
+      "gate": "Trust 1 — Transactional"
+    }
+  ]
+}
