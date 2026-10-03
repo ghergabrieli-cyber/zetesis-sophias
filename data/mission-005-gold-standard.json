@@ -1,0 +1,62 @@
+{
+  "id": "M005",
+  "title": "Why Procurement?",
+  "version": "1.0",
+  "purpose": "Show that Procurement creates different kinds of value depending on business context.",
+  "requests": [
+    {
+      "id": "R1",
+      "need": "6 standard laptops",
+      "value_eur": 6300,
+      "context": "Approved catalog item; preferred supplier; negotiated unit price €1,050.",
+      "best_route": "Controlled catalog / operational buying",
+      "procurement_value": "Use existing commercial path; avoid unnecessary sourcing."
+    },
+    {
+      "id": "R2",
+      "need": "24 production connectors",
+      "value_eur": 4800,
+      "context": "Production-critical timing; existing supplier and inbound supply must be investigated.",
+      "best_route": "Operational buying / supplier delivery management",
+      "procurement_value": "Protect continuity through evidence, supplier confirmation and exception handling."
+    },
+    {
+      "id": "R3",
+      "need": "Brand campaign agency",
+      "value_eur": 68000,
+      "context": "Vague scope, multiple capable suppliers, subjective/technical evaluation needed.",
+      "best_route": "Sourcing event after stakeholder discovery",
+      "procurement_value": "Clarify requirement, create competitive process, normalize proposals and govern award."
+    },
+    {
+      "id": "R4",
+      "need": "Emergency chiller repair",
+      "value_eur": 8000,
+      "context": "Production line down; approved emergency contractor available; delay costs far exceed sourcing benefit.",
+      "best_route": "Controlled emergency exception",
+      "procurement_value": "Protect continuity while documenting exception and commercial reasonableness."
+    },
+    {
+      "id": "R5",
+      "need": "Prototype sensor housing",
+      "value_eur": 14000,
+      "context": "Engineering suggests one supplier; prototype capability, IP and technical iteration matter more than simple unit price.",
+      "best_route": "Early Procurement + Engineering supplier assessment",
+      "procurement_value": "Test capability, risk, commercial terms and single-source justification without forcing fake competition."
+    }
+  ],
+  "anti_patterns": [
+    "Procurement must approve every purchase.",
+    "Only spend above a fixed threshold deserves Procurement.",
+    "Procurement value is always the lowest price.",
+    "Every requirement should be competed even when an emergency or justified single-source case makes that irrational."
+  ],
+  "strong_principle": "Procurement chooses the lightest process that still protects value, continuity, competition, risk and governance for the specific need.",
+  "learning_targets": [
+    "procurement_purpose",
+    "proportional_process",
+    "commercial_value",
+    "continuity",
+    "stakeholder_judgment"
+  ]
+}
