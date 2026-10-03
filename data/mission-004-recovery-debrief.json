@@ -1,0 +1,45 @@
+{
+  "mission": "M004",
+  "version": "1.0",
+  "phases": [
+    "investigation",
+    "routing_judgment",
+    "consequence",
+    "recovery",
+    "debrief",
+    "transfer"
+  ],
+  "principle": "Primary ownership follows the nature of the core problem. Procurement collaborates where supplier, commercial or buying-process action is part of the solution.",
+  "routing_truth": {
+    "bank_change": {
+      "primary": "Finance/AP control + verified supplier-master process",
+      "procurement": "Supplier relationship context only; never bypass payment controls."
+    },
+    "stock_mismatch": {
+      "primary": "Warehouse",
+      "procurement": "Only if supplier/receipt evidence becomes relevant."
+    },
+    "liability_clause": {
+      "primary": "Legal",
+      "procurement": "Commercial context and supplier negotiation interface."
+    },
+    "forecast_increase": {
+      "primary": "Planning",
+      "procurement": "Supplier capacity/commercial response after demand is defined."
+    },
+    "failed_inspection": {
+      "primary": "Quality",
+      "procurement": "Supplier escalation/corrective-action commercial support."
+    },
+    "invoice_price_variance": {
+      "primary": "AP for invoice block processing",
+      "procurement": "Resolve PO/commercial mismatch where applicable."
+    }
+  },
+  "shadow_timelines": {
+    "supplier_everything": "Control owners bypassed; Procurement becomes a catch-all queue.",
+    "money_everything": "Spend is confused with functional authority.",
+    "po_only": "Procurement is reduced to transaction administration and misses supplier/commercial value.",
+    "owner_plus_collaborators": "Accountability remains clear without pretending work is siloed."
+  }
+}
