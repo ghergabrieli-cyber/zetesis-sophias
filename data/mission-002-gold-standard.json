@@ -1,0 +1,43 @@
+{
+  "id": "M002",
+  "title": "How Does This Company Make Money?",
+  "version": "1.0",
+  "purpose": "Build business literacy before procurement terminology.",
+  "situation": "A customer order worth €84,000 looks like revenue in Sales. The learner must trace what has to happen, what Novaris must spend, and what could destroy margin before treating revenue as value.",
+  "truth": {
+    "customer_order": {
+      "id": "SO-88302",
+      "customer": "Asterion Water Systems",
+      "value_eur": 84000,
+      "product": "6 NX-8 monitoring cabinets",
+      "committed_ship_date": "17 October"
+    },
+    "bill_of_materials_cost_eur": 37800,
+    "external_services_eur": 6400,
+    "planned_freight_eur": 2200,
+    "labor_overhead_allocation_eur": 11800,
+    "warranty_reserve_eur": 1800,
+    "expected_total_cost_eur": 60000,
+    "expected_gross_contribution_eur": 24000,
+    "current_risk": {
+      "component": "industrial relay set",
+      "supplier": "Korex Manufacturing",
+      "delay_days": 4,
+      "expedite_option_eur": 3100
+    },
+    "key_tradeoff": "Paying €3,100 premium freight may protect the €84,000 customer commitment and contribution; refusing the cost may create a larger delivery/margin risk."
+  },
+  "learning_targets": [
+    "revenue_vs_profit",
+    "cost_structure",
+    "business_tradeoffs",
+    "procurement_business_context"
+  ],
+  "strong_reasoning": "Revenue is not profit. Procurement decisions must be understood in the context of customer commitments, total cost, continuity and margin rather than unit price alone.",
+  "systems": [
+    "sales_view",
+    "cost_sheet",
+    "production_schedule",
+    "logistics_control_tower"
+  ]
+}
