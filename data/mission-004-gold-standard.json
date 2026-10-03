@@ -1,0 +1,56 @@
+{
+  "id": "M004",
+  "title": "Who Does What?",
+  "version": "1.0",
+  "purpose": "Teach primary ownership versus cross-functional collaboration.",
+  "cases": [
+    {
+      "id": "C1",
+      "problem": "Supplier requests bank-detail change before payment.",
+      "primary_owner": "Finance/AP control + verified supplier-master process",
+      "procurement_role": "Validate supplier relationship context; do not bypass payment controls."
+    },
+    {
+      "id": "C2",
+      "problem": "Warehouse count 42; system 57.",
+      "primary_owner": "Warehouse",
+      "procurement_role": "Support only if receipt/supplier evidence becomes relevant."
+    },
+    {
+      "id": "C3",
+      "problem": "Engineering asks if liability clause is acceptable.",
+      "primary_owner": "Legal",
+      "procurement_role": "Provide commercial context and supplier negotiation interface."
+    },
+    {
+      "id": "C4",
+      "problem": "Customer forecast jumps 35%.",
+      "primary_owner": "Planning",
+      "procurement_role": "Assess supplier capacity after the requirement is understood."
+    },
+    {
+      "id": "C5",
+      "problem": "Incoming components fail inspection.",
+      "primary_owner": "Quality",
+      "procurement_role": "Support supplier escalation/corrective action and commercial follow-up."
+    },
+    {
+      "id": "C6",
+      "problem": "Invoice blocked for price variance.",
+      "primary_owner": "AP for invoice block processing; Procurement if PO/commercial terms are wrong",
+      "procurement_role": "Resolve PO/negotiated price mismatch where applicable."
+    }
+  ],
+  "strong_principle": "Route by the nature of the core problem. Then add Procurement where supplier, commercial or buying-process action is part of the solution.",
+  "traps": [
+    "Anything with a supplier belongs to Procurement.",
+    "Anything with money belongs to Procurement.",
+    "Procurement only owns purchase orders."
+  ],
+  "evidence": [
+    "Functional literacy",
+    "Stakeholder awareness",
+    "Escalation judgment",
+    "Role boundaries"
+  ]
+}
