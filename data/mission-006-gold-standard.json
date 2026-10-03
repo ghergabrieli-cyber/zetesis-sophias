@@ -1,0 +1,48 @@
+{
+  "id": "M006",
+  "title": "Procurement ≠ Purchasing",
+  "version": "1.0",
+  "purpose": "Distinguish the transaction of buying from the broader professional lifecycle without devaluing operational purchasing.",
+  "cases": [
+    {
+      "id": "A",
+      "need": "Replacement safety gloves from approved catalog supplier",
+      "context": "Standard specification, contracted price, approved supplier, stock route known.",
+      "likely_work": "Transactional purchasing / operational execution",
+      "hidden_work": "Minimal; correct execution still matters."
+    },
+    {
+      "id": "B",
+      "need": "New vibration-monitoring service for three European plants",
+      "context": "Business requirement still vague; multiple supplier models; data access and service levels matter; no current contract.",
+      "likely_work": "Broader Procurement",
+      "hidden_work": [
+        "Requirement discovery",
+        "Market/supplier research",
+        "Commercial model",
+        "Risk and data considerations",
+        "Evaluation",
+        "Negotiation",
+        "Contracting",
+        "Implementation/governance"
+      ]
+    }
+  ],
+  "core_distinction": {
+    "purchasing": "The operational act/process of ordering goods or services through an established path.",
+    "procurement": "The broader discipline of understanding need, shaping the buying path, sourcing/assessing suppliers, commercial decision-making, contracting, supplier/risk management and lifecycle value — which may include purchasing."
+  },
+  "traps": [
+    "Purchasing is low-value or unimportant.",
+    "Procurement begins only when an RFQ is launched.",
+    "Every purchase requires strategic sourcing.",
+    "A purchase order is the entire Procurement lifecycle."
+  ],
+  "strong_principle": "Use the amount of Procurement work the need actually requires. Routine purchasing can be correct professional work; complex/novel needs require broader investigation and commercial judgment.",
+  "learning_targets": [
+    "procurement_vs_purchasing",
+    "scope_recognition",
+    "proportionality",
+    "lifecycle_thinking"
+  ]
+}
