@@ -1,0 +1,68 @@
+{
+  "mission": "M001",
+  "version": "1.0",
+  "phases": [
+    "investigation",
+    "decision",
+    "consequence",
+    "recovery",
+    "debrief",
+    "transfer"
+  ],
+  "branches": {
+    "buy": {
+      "consequence": [
+        "duplicate_supply_path",
+        "possible_avoidable_spend",
+        "inventory_risk"
+      ],
+      "recovery_goal": "Pause commitment while still reversible; verify PO-77104 and current free stock.",
+      "recoverable": true
+    },
+    "blame": {
+      "consequence": [
+        "production_risk_unresolved",
+        "stakeholder_trust_down",
+        "time_lost"
+      ],
+      "recovery_goal": "Reopen the case and replace attribution with evidence gathering.",
+      "recoverable": true
+    },
+    "ask": {
+      "consequence": [
+        "unnecessary_escalation",
+        "independence_not_demonstrated",
+        "time_lost"
+      ],
+      "recovery_goal": "Exhaust accessible evidence before escalating the unresolved point.",
+      "recoverable": true
+    },
+    "uncertain": {
+      "consequence": [
+        "no_premature_commitment",
+        "risk_remains_visible"
+      ],
+      "recovery_goal": "Convert uncertainty into a precise information request.",
+      "recoverable": true
+    }
+  },
+  "supplier_confirmation": {
+    "po": "PO-77104",
+    "quantity": 20,
+    "confirmed_delivery": "Thursday 11:00",
+    "destination": "BRN-01",
+    "result": "2 free + 20 confirmed = 22 before Friday build; Line 3 needs 18.",
+    "immediate_decision": "No emergency duplicate purchase required for the Friday build.",
+    "follow_up": "Safety-stock replenishment remains a separate planning question."
+  },
+  "debrief": {
+    "principle": "Urgency changes investigation speed; it does not determine the correct action.",
+    "professional_uncertainty": "Competent when the learner can identify the decision-changing unknown and the next evidence needed.",
+    "shadow_timelines": {
+      "premature_buy": "Potential duplicate supply and avoidable working-capital/inventory impact.",
+      "blame": "Shortage remains unresolved while time is lost.",
+      "immediate_escalation": "Accessible evidence is left unused; mentor returns the case.",
+      "verify_first": "Existing inbound supply covers the immediate production need."
+    }
+  }
+}
