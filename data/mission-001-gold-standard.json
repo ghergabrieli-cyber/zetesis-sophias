@@ -1,0 +1,70 @@
+{
+  "id": "M001",
+  "title": "First Day",
+  "version": "1.0",
+  "purpose": "Gold-standard introductory mission: teach business orientation, investigation discipline and professional uncertainty before procurement vocabulary.",
+  "truth": {
+    "customer_order": {
+      "id": "SO-88214",
+      "customer": "Vektor Automation GmbH",
+      "product": "12 NX-4 control units",
+      "ship_commitment": "Tuesday 16:00",
+      "installation_window": "Wednesday morning"
+    },
+    "warehouse": {
+      "plant": "BRN-01",
+      "on_hand_connectors": 8,
+      "reserved_connectors": 6,
+      "free_connectors": 2,
+      "safety_stock_target": 10
+    },
+    "production": {
+      "line": "Line 3",
+      "planned_build": "Friday 16:00",
+      "connector_demand": 18,
+      "next_batch": "Monday 07:00"
+    },
+    "requisition": {
+      "id": "PR-10428",
+      "requester": "Jonas Weber",
+      "quantity": 24,
+      "uom": "EA",
+      "preferred_supplier": "Helix Components",
+      "need_by": "Friday 14:00"
+    },
+    "inbound_po": {
+      "id": "PO-77104",
+      "supplier": "Helix Components",
+      "quantity": 20,
+      "system_delivery_date": "Thursday",
+      "supplier_confirmation": "missing"
+    }
+  },
+  "distractors": [
+    "The preferred supplier is Helix Components.",
+    "The PR quantity is 24 while immediate Line 3 demand is 18.",
+    "The system delivery date says Thursday but confirmation is missing."
+  ],
+  "decision_changing_unknown": "Whether PO-77104 for 20 connectors is actually confirmed to arrive before Friday production.",
+  "strong_preliminary_position": "Do not commit to a new purchase yet. Confirm the inbound PO, then compare confirmed incoming quantity plus usable stock against production demand and timing.",
+  "consequence_model": {
+    "premature_buy": "Potential duplicate supply, excess inventory and unnecessary spend.",
+    "blame_requester": "Operational risk remains unresolved and cross-functional trust deteriorates.",
+    "escalate_without_investigation": "Mentor returns the case and expects the learner to exhaust available evidence first.",
+    "professional_uncertainty": "Investigation continues with a precise information request; no premature commitment is made."
+  },
+  "evidence": [
+    "Business orientation",
+    "Systems thinking",
+    "Information seeking",
+    "Professional uncertainty",
+    "Judgment",
+    "Stakeholder awareness"
+  ],
+  "mastery_links": [
+    "Procurement Foundations",
+    "Stakeholder Management",
+    "Systems & Digital Procurement",
+    "Operational Execution"
+  ]
+}
