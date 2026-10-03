@@ -1,0 +1,19 @@
+{
+  "mission": "M005",
+  "phases": [
+    "investigation",
+    "route_selection",
+    "consequence",
+    "recovery",
+    "debrief",
+    "transfer"
+  ],
+  "consequence_logic": {
+    "approve_everything": "Bureaucracy grows; low-risk catalog buying slows; Procurement capacity is consumed.",
+    "threshold_only": "Risk/complexity below the threshold is missed; high-value routine purchases may be overprocessed.",
+    "lowest_price": "Continuity, capability, quality, time and stakeholder outcome are undervalued.",
+    "contextual": "Process intensity matches business need and Procurement effort is spent where it changes outcomes."
+  },
+  "recovery": "Re-route each request by business need, risk, market complexity, urgency and existing controls rather than one universal rule.",
+  "debrief_principle": "Good Procurement is proportional. It is not maximum process; it is the right process for the value and risk at stake."
+}
