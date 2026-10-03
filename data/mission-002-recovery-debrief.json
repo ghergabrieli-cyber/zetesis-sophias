@@ -1,0 +1,77 @@
+{
+  "mission": "M002",
+  "version": "1.0",
+  "phases": [
+    "investigation",
+    "commercial_comparison",
+    "decision",
+    "consequence",
+    "recovery",
+    "debrief",
+    "transfer"
+  ],
+  "glossary_in_context": {
+    "revenue": "Money expected from the customer for the order. It is not the amount the company keeps.",
+    "cost": "Resources Novaris expects to spend to deliver the order.",
+    "gross_contribution": "Revenue minus the expected order-level costs used in this scenario. It is not final company profit.",
+    "incremental_cost": "An additional cost created by a specific decision; here, €3,100 premium freight."
+  },
+  "base_case": {
+    "revenue_eur": 84000,
+    "expected_cost_eur": 60000,
+    "expected_gross_contribution_eur": 24000
+  },
+  "expedite_case": {
+    "incremental_freight_eur": 3100,
+    "expected_cost_eur": 63100,
+    "expected_gross_contribution_eur": 20900,
+    "contribution_reduction_pct": 12.9,
+    "operational_effect": "Recovers relay timing so the 17 October shipment remains feasible."
+  },
+  "branches": {
+    "cheap": {
+      "reasoning_error": "Treats a visible cost in isolation.",
+      "consequence": [
+        "freight_cost_avoided",
+        "shipment_commitment_exposed",
+        "future_margin_impact_unknown"
+      ],
+      "recovery": "Recalculate the order economics and compare the saving with customer and contribution risk."
+    },
+    "revenue": {
+      "reasoning_error": "Confuses revenue with profit/value.",
+      "consequence": [
+        "expedite_may_be_right_for_wrong_reason",
+        "economics_not_understood"
+      ],
+      "recovery": "Separate revenue, cost and contribution before recommending."
+    },
+    "delay": {
+      "reasoning_error": "Prefers a certain saving without valuing the risk it creates.",
+      "consequence": [
+        "3100_saved",
+        "customer_delivery_exposed",
+        "potential_larger_loss"
+      ],
+      "recovery": "Compare the €3,100 saving with the contribution and commitment at risk."
+    },
+    "compare": {
+      "reasoning_strength": "Translates price into business impact.",
+      "consequence": [
+        "contribution_reduced_to_20900",
+        "customer_commitment_protected"
+      ],
+      "recovery": "Document recommendation, incremental cost and supplier accountability separately."
+    }
+  },
+  "strong_recommendation": "Use premium freight to protect the committed shipment, explicitly documenting that expected gross contribution falls from €24,000 to about €20,900. Separately pursue Korex accountability; do not pretend the expedite is free or that revenue alone justifies it.",
+  "debrief": {
+    "principle": "A cost is not high or low in isolation; compare it with the value, risk and alternatives it changes.",
+    "shadow_timelines": {
+      "reject_as_expensive": "Looks cheaper until the delay affects production/customer outcomes.",
+      "approve_because_revenue_large": "Can reach the same action through weak reasoning; revenue is not profit.",
+      "accept_delay_for_saving": "Protects a visible €3,100 while exposing a larger economic outcome.",
+      "compare_business_effect": "Makes the trade-off explicit and defensible."
+    }
+  }
+}
