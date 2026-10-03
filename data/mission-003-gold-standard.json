@@ -1,0 +1,66 @@
+{
+  "id": "M003",
+  "title": "Where Does The Product Come From?",
+  "version": "1.0",
+  "purpose": "Teach supply-chain flow from zero by tracing one finished product backwards.",
+  "situation": "A finished NX-4 control unit is ready for customer shipment. Elena asks the learner to work backwards until every physical and information handoff makes sense.",
+  "truth": {
+    "finished_good": {
+      "sku": "NX-4",
+      "location": "BRN-01 Finished Goods",
+      "status": "Ready to ship"
+    },
+    "assembly": {
+      "site": "Brno Assembly",
+      "line": "Line 2",
+      "build_completed": "Today 09:20"
+    },
+    "components": [
+      {
+        "item": "Controller board",
+        "source": "Veltronics",
+        "country": "South Korea",
+        "received": "3 days ago"
+      },
+      {
+        "item": "Industrial connectors",
+        "source": "Helix Components",
+        "country": "Czech Republic",
+        "received": "5 days ago"
+      },
+      {
+        "item": "Cable harness",
+        "source": "Nordex Industrial",
+        "country": "Poland",
+        "received": "7 days ago"
+      }
+    ],
+    "information_flow": [
+      "Customer order creates demand.",
+      "Planning converts demand into production requirement.",
+      "Production consumes components.",
+      "Warehouse receives/stores/issues physical stock.",
+      "Procurement creates and manages supplier buying paths.",
+      "Logistics moves goods between organizations/sites."
+    ],
+    "misconception_traps": [
+      "Procurement physically moves goods.",
+      "Warehouse decides what the customer needs.",
+      "A purchase order alone means the component exists physically at Novaris.",
+      "The supplier is the beginning of every chain; upstream suppliers may exist beyond tier 1."
+    ]
+  },
+  "learning_targets": [
+    "supply_chain_basics",
+    "physical_vs_information_flow",
+    "functional_handoffs",
+    "upstream_downstream"
+  ],
+  "systems": [
+    "customer_order",
+    "production_trace",
+    "warehouse_movements",
+    "purchase_history",
+    "supplier_map"
+  ]
+}
