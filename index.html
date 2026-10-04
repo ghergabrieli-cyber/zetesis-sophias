@@ -24,23 +24,52 @@
 
 /* Consequence → recovery → debrief */
 .consequence{display:none;margin-top:18px;border:1px solid var(--line);background:#080e16}.consequence.on{display:block}.phase-head{padding:12px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center}.phase-head span{font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#778497}.phase-head b{font-size:9px;color:var(--gold)}.phase-body{padding:16px}.phase-body h3{font:400 22px Georgia,serif;margin:0 0 9px}.phase-body p{font-size:10px;line-height:1.65;color:#9eabba}.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.impact{border:1px solid var(--line);padding:10px}.impact span{display:block;font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:#6f7c8e}.impact b{display:block;font-size:9px;line-height:1.45;margin-top:5px}.recovery-list{display:grid;gap:8px;margin-top:12px}.recovery-btn{border:1px solid var(--line);background:#0a111b;color:var(--ink);padding:12px 13px;text-align:left;font-size:10px;cursor:pointer}.recovery-btn:hover{border-color:rgba(125,228,212,.35)}.recovery-btn.good{border-color:rgba(125,228,212,.45)}.supplier-response{display:none;margin-top:14px;border-left:2px solid var(--cyan);padding:13px 14px;background:rgba(125,228,212,.04);font-size:10px;line-height:1.6;color:#aab6c4}.supplier-response.on{display:block}.debrief{display:none;margin-top:18px;border:1px solid rgba(125,228,212,.22);background:#091119}.debrief.on{display:block}.debrief-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px}.debrief-card{border:1px solid var(--line);padding:14px}.debrief-card h4{font:400 17px Georgia,serif;margin:0 0 8px}.debrief-card p{font-size:9px;line-height:1.6;color:#8593a5}.shadow{grid-column:1/-1;border-left:2px solid var(--gold)}.reflection{grid-column:1/-1}.reflection textarea{width:100%;min-height:80px;background:#070d14;border:1px solid var(--line);color:var(--ink);padding:12px;font:inherit;font-size:10px;resize:vertical}.reflection button{margin-top:8px}.debrief-label{font-size:7px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}@media(max-width:700px){.impact-grid,.debrief-grid{grid-template-columns:1fr}.shadow,.reflection{grid-column:auto}}
+
+/* Global horizontal navigation + page architecture */
+:root{--navh:76px}
+body{padding-top:var(--navh)}
+.global-nav{position:fixed;top:0;left:0;right:0;height:var(--navh);z-index:100;background:rgba(5,8,14,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(16px);display:flex;align-items:center;padding:0 3vw;gap:28px}
+.global-logo{display:flex;align-items:center;min-width:210px;cursor:pointer;border:0;background:transparent;padding:0}
+.global-logo img{width:190px;height:58px;object-fit:contain;object-position:left center;display:block}
+.global-links{display:flex;align-items:stretch;gap:2px;height:100%;overflow-x:auto;scrollbar-width:none}
+.global-links::-webkit-scrollbar{display:none}
+.global-links button{border:0;border-bottom:2px solid transparent;background:transparent;color:#78869a;padding:0 16px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;cursor:pointer}
+.global-links button:hover{color:var(--ink);background:rgba(255,255,255,.015)}
+.global-links button.active{color:var(--cyan);border-bottom-color:var(--cyan)}
+.global-status{margin-left:auto;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.screen>header{display:none}
+.page-head{border-bottom:1px solid var(--line);padding:28px 5vw 20px;background:#070b12;display:flex;justify-content:space-between;align-items:end;gap:24px}
+.page-head h1{font:400 34px Georgia,serif;margin:5px 0 0}
+.page-head p{margin:0;color:#778497;font-size:10px;max-width:520px;line-height:1.6}
+.page-shell{max-width:1180px;margin:auto;padding:38px 5vw 80px}
+.page-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.page-card{border:1px solid var(--line);background:#0a1019;padding:18px;min-height:170px;position:relative}
+.page-card.live{cursor:pointer;border-color:rgba(125,228,212,.18)}
+.page-card .num{font:400 28px Georgia,serif;color:#506075}
+.page-card.live .num{color:var(--gold)}
+.page-card h3{font:400 18px Georgia,serif;margin:22px 0 8px}
+.page-card p{font-size:9px;line-height:1.55;color:#7a8798}
+.page-card small{position:absolute;top:15px;right:15px;font-size:7px;letter-spacing:.13em;text-transform:uppercase;color:#5d6a7c}
+.page-card.live small{color:var(--cyan)}
+.company-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:12px}
+.company-panel{border:1px solid var(--line);background:#0a1019;padding:20px}
+.company-panel h3{font:400 24px Georgia,serif;margin:4px 0 14px}
+.company-panel p{font-size:10px;color:#8390a2;line-height:1.65}
+.org-table{display:grid;grid-template-columns:1fr 1fr;margin-top:14px;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.org-table div{padding:12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.org-table b{font-size:10px}.org-table span{display:block;font-size:8px;color:#6f7c8e;margin-top:5px}
+@media(max-width:900px){.global-status{display:none}.global-logo{min-width:155px}.global-logo img{width:150px}.page-grid{grid-template-columns:1fr 1fr}.company-grid{grid-template-columns:1fr}}
+@media(max-width:620px){:root{--navh:118px}.global-nav{height:var(--navh);align-items:flex-start;flex-wrap:wrap;padding:8px 14px 0;gap:0}.global-logo{height:56px}.global-logo img{width:145px;height:48px}.global-links{order:3;width:100%;height:54px;border-top:1px solid var(--line)}.global-links button{padding:0 12px}.page-grid{grid-template-columns:1fr}.page-head{padding:22px 20px 18px}.page-shell{padding:28px 20px 60px}}
 </style>
 </head>
 <body>
 <div class="gridbg"></div>
+<nav class="global-nav" id="globalNav"><button class="global-logo" data-go="atrium" aria-label="Zetesis Sophias home"><img src="/zetesis-logo.webp" alt="Zetesis Sophias"></button><div class="global-links"><button data-nav="atrium" data-go="atrium">Atlas</button><button data-nav="world" data-go="world">Procurement</button><button data-nav="missionsHub" data-go="missionsHub">Missions</button><button data-nav="desk" data-go="desk">Novaris Desk</button><button data-nav="nova" data-go="nova">NOVA ERP</button><button data-nav="mastery" data-go="mastery">Mastery</button><button data-nav="companyHub" data-go="companyHub">Company</button></div><div class="global-status">Trust 00 · Observer</div></nav>
 
 <section id="atrium" class="screen on">
 <header><div class="brand"><span class="mark">ZS</span><span>ZETESIS SOPHIAS</span></div><div class="meta mid">Professional Learning Universe</div><div class="right meta">ATLAS / 00</div></header>
 <div class="main"><div class="hero"><div class="eyebrow">A universe of professions · built for mastery</div><h1>Enter the work.<em>Earn the responsibility.</em></h1><p class="lede">Not a course library. Enter a functioning professional world, investigate situations, use working systems, make decisions, live with consequences and prove mastery.</p><div class="actions"><button class="btn" data-go="world">Enter Procurement →</button><span class="note">No prior professional knowledge assumed</span></div></div><div class="atlas"><div class="orb"></div><div class="orb o2"></div><div class="orb o3"></div><div class="node n1">01 · Procurement</div><div class="node n2">06 · Data</div><div class="node n3">12 · Cybersecurity</div><div class="node n4">07 · Sales</div><div class="center"><b>18</b><small>PROFESSIONAL WORLDS</small></div></div></div>
-<div class="catalog"><div class="cathead"><div><div class="eyebrow">World Atlas</div><h2>Choose a professional system to enter.</h2></div><div class="note">Worlds share tools, systems and business reality.</div></div><div class="worlds">
-<div class="world live" data-go="world"><span class="status">LIVE SLICE</span><div class="idx">01</div><h3>Procurement</h3><p>From first request to strategic judgment.</p></div>
-<div class="world"><div class="idx">02</div><h3>Supply Chain Planning</h3><p>Demand, supply, inventory and resilience.</p></div>
-<div class="world"><div class="idx">03</div><h3>Logistics</h3><p>Transport, disruptions and flow.</p></div>
-<div class="world"><div class="idx">04</div><h3>Operations</h3><p>Capacity, process and performance.</p></div>
-<div class="world"><div class="idx">05</div><h3>Business Analysis</h3><p>Requirements, evidence and change.</p></div>
-<div class="world"><div class="idx">06</div><h3>Data Analysis</h3><p>Messy data to defensible decisions.</p></div>
-</div></div>
-</section>
+<div class="catalog"><div class="cathead"><div><div class="eyebrow">World Atlas</div><h2>One world is open.</h2></div><div class="note">More worlds will unlock as the platform expands.</div></div><div class="page-grid" style="margin-top:22px"><div class="page-card live" data-go="world"><small>Open</small><div class="num">01</div><h3>Procurement</h3><p>From absolute zero to strategic procurement judgment inside Novaris Systems Group.</p></div><div class="page-card"><small>Coming later</small><div class="num">18</div><h3>Professional worlds</h3><p>Supply chain, logistics, operations, sales, data, cybersecurity, AI, cloud and more share one professional universe.</p></div></div></div></section>
 
 <section id="world" class="screen">
 <header><div><button class="back" data-go="atrium">← Return to Atlas</button></div><div class="meta mid">World 01 · Procurement</div><div class="right meta">TRUST 00 / OBSERVER</div></header>
@@ -54,6 +83,33 @@
 <section class="module"><div class="mh"><span>First Day</span><span id="done">0 / 6</span></div><div id="missionList"></div></section>
 <section class="module"><div class="mh"><span>Company Context</span><span>EU HQ</span></div><div class="sheet"><div class="block"><h4>Novaris Systems Group</h4><p>Industrial monitoring and control systems.</p><p>4,800 employees · €1.1bn revenue · €420m external spend.</p></div><div class="block"><div class="eyebrow">Functions</div><div class="chips"><span>Procurement</span><span>Finance</span><span>Production</span><span>Warehouse</span><span>Quality</span><span>Legal</span><span>Planning</span><span>Logistics</span></div></div><div class="block"><button class="btn secondary" data-go="nova">Open NOVA ERP →</button></div></div></section>
 </div></main></div>
+</section>
+
+
+<section id="missionsHub" class="screen">
+<div class="page-head"><div><div class="eyebrow">Trust 00 · First Arc</div><h1>Missions</h1></div><p>Each mission is its own case environment. Open one mission at a time; evidence and consequences persist across the arc.</p></div>
+<div class="page-shell"><div class="page-grid">
+<div class="page-card live" data-mission="0"><small>Live</small><div class="num">001</div><h3>First Day</h3><p>Understand Novaris before learning procurement vocabulary.</p></div>
+<div class="page-card live" data-mission="1"><small>Live</small><div class="num">002</div><h3>How Does This Company Make Money?</h3><p>Revenue, cost, contribution and business trade-offs in context.</p></div>
+<div class="page-card live" data-mission="2"><small>Live</small><div class="num">003</div><h3>Where Does The Product Come From?</h3><p>Trace physical and information flow through the supply chain.</p></div>
+<div class="page-card live" data-mission="3"><small>Live</small><div class="num">004</div><h3>Who Does What?</h3><p>Primary ownership versus cross-functional collaboration.</p></div>
+<div class="page-card live" data-mission="4"><small>Live</small><div class="num">005</div><h3>Why Procurement?</h3><p>Choose proportional Procurement intervention by business need.</p></div>
+<div class="page-card live" data-mission="5"><small>Live</small><div class="num">006</div><h3>Procurement ≠ Purchasing</h3><p>Distinguish routine execution from broader professional judgment.</p></div>
+<div class="page-card"><small>Next</small><div class="num">007</div><h3>Direct or Indirect?</h3><p>Classify spend from business context, not memorized labels.</p></div>
+<div class="page-card"><small>Next</small><div class="num">008</div><h3>The Laptop</h3><p>Separate a requested solution from the underlying requirement.</p></div>
+<div class="page-card"><small>Next</small><div class="num">009</div><h3>But I Need It Tomorrow</h3><p>Handle genuine urgency without blindly bypassing governance.</p></div>
+<div class="page-card"><small>Next</small><div class="num">010</div><h3>PR-10428</h3><p>Read and investigate a purchase requisition inside NOVA.</p></div>
+<div class="page-card"><small>Next</small><div class="num">011</div><h3>Approved</h3><p>Understand what approval does — and does not — mean.</p></div>
+<div class="page-card"><small>Trust Gate</small><div class="num">012</div><h3>First Career Review</h3><p>Mixed, lightly scaffolded work tests transfer before Trust 01.</p></div>
+</div></div>
+</section>
+
+<section id="companyHub" class="screen">
+<div class="page-head"><div><div class="eyebrow">Novaris Systems Group</div><h1>Company</h1></div><p>Your company context lives here instead of being buried down a long page. This becomes the reference point for people, functions, sites and business model.</p></div>
+<div class="page-shell"><div class="company-grid">
+<div class="company-panel"><div class="eyebrow">Business</div><h3>Industrial monitoring & control systems</h3><p>Novaris designs and supplies sensors, controllers, electrical assemblies, compact motors, control panels and connected monitoring equipment across European industrial customers.</p><div class="facts"><div><b>4,800</b><span>Employees</span></div><div><b>€1.1bn</b><span>Revenue</span></div><div><b>€420m</b><span>External spend</span></div><div><b>EU</b><span>Multi-site operations</span></div></div></div>
+<div class="company-panel"><div class="eyebrow">Functional map</div><h3>Who works with Procurement?</h3><div class="org-table"><div><b>Planning</b><span>Demand & production requirements</span></div><div><b>Finance</b><span>Budgets, AP & controls</span></div><div><b>Quality</b><span>Conformance & supplier quality</span></div><div><b>Warehouse</b><span>Physical stock & receipts</span></div><div><b>Legal</b><span>Legal interpretation & clauses</span></div><div><b>Engineering</b><span>Technical requirements</span></div><div><b>Logistics</b><span>Movement & transport</span></div><div><b>Procurement</b><span>Supplier/commercial buying path</span></div></div></div>
+</div></div>
 </section>
 
 <section id="mission" class="screen">
@@ -116,7 +172,7 @@ function logEvidence(type,detail){evidenceLog.push({type,detail,mission:'M'+Stri
 const competencies=['Procurement Foundations','Operational Execution','Commercial Awareness','Supplier Management','Sourcing','Negotiation','Contracting','Risk, Ethics & Compliance','Analytics','Stakeholder Management','Systems & Digital Procurement','Category & Strategic Thinking'];
 function competencyEvidence(name){const map={'Procurement Foundations':['Business orientation','Company Map','Mission completed','Revenue','Cost structure','Customer demand','functional ownership','Procurement involvement boundaries','Procurement pathway','proportional Procurement intervention','Purchasing versus Procurement','broader Procurement','routine purchasing'],'Commercial Awareness':['Revenue','Cost structure','margin','Premium freight','Commercial recommendation','Value and risk lens','price, total cost'],'Stakeholder Management':['People Directory','functional authority','primary functional ownership','owner from Procurement collaboration'],'Systems & Digital Procurement':['NOVA ERP','Sales Order'],'Operational Execution':['Warehouse','Production','Inbound PO','Supplier delay','Logistics option','physical flow','Production transformation']};const keys=map[name]||[];return evidenceLog.filter(e=>keys.some(k=>e.detail.includes(k))).length}
 function renderMastery(){const grid=document.getElementById('masteryGrid');const feed=document.getElementById('masteryFeed');if(grid)grid.innerHTML=competencies.map((c,i)=>{const n=competencyEvidence(c);const level=n>=3?'M2 · Guided performance':n>=1?'M1 · Evidence emerging':'M0 · Not yet evidenced';return '<div class="competency"><div class="level">'+level+'</div><h3>'+c+'</h3><p>'+(n? n+' relevant evidence event'+(n===1?'':'s')+' recorded so far.':'No evidence yet. This is expected at the beginning of Trust 00.')+'</p></div>'}).join('');if(feed)feed.innerHTML=evidenceLog.length?evidenceLog.slice(-12).reverse().map(x=>'<div class="feed-row"><span>'+x.mission+'</span><span>'+x.type+'</span><div>'+x.detail+'</div></div>').join(''):'<div class="feed-row"><span>—</span><span>No evidence</span><div>Your ledger begins when you investigate the world.</div></div>'}
-function go(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('on'));document.getElementById(id).classList.add('on');lastScreen=id;persist();window.scrollTo(0,0)}
+function go(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('on'));const target=document.getElementById(id);if(!target)return;target.classList.add('on');document.querySelectorAll('[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===id||(id==='mission'&&b.dataset.nav==='missionsHub')));lastScreen=id;persist();history.replaceState(null,'','#'+id);window.scrollTo(0,0)}
 function renderList(){document.getElementById('missionList').innerHTML=missions.map((m,i)=>'<button class="mrow" data-mission="'+i+'"><span>'+String(i+1).padStart(3,'0')+'</span><div><b>'+m.t+'</b><small>'+m.k+'</small></div><span>'+(done.includes(i)?'✓':'→')+'</span></button>').join('');document.getElementById('done').textContent=done.length+' / 6'}
 function renderIntel(){const a=[];if(seenNova)a.push('<div class="intel-cell"><span>NOVA ERP</span><b>PR-10428 · 24 connectors · Brno · Friday 14:00</b></div>');if(seenPeople)a.push('<div class="intel-cell"><span>People Directory</span><b>Jonas Weber · Production Planning · legitimate operational urgency</b></div>');if(seenCompany)a.push('<div class="intel-cell"><span>Company Map</span><b>Planning → Production → Warehouse → Procurement are linked</b></div>');document.getElementById('intelGrid').innerHTML=a.join('');document.getElementById('intel').classList.toggle('on',a.length>0)}
 function configureMission(i){
@@ -318,7 +374,7 @@ document.getElementById('openNova').onclick=()=>{if(idx===5){openArtifact('routi
 document.getElementById('masteryRail').onclick=()=>{renderMastery();go('mastery')};
 document.getElementById('saveReflection').onclick=()=>{const t=document.getElementById('reflectionText').value.trim();if(!t)return;if(idx===1)reflection2=t;else if(idx===2)reflection3=t;else if(idx===3)reflection4=t;else if(idx===4)reflection5=t;else if(idx===5)reflection6=t;else reflection=t;persist();logEvidence('Transfer','Learner principle: '+t);document.getElementById('saveReflection').textContent='Saved ✓'};
 if(reflection)document.getElementById('reflectionText').value=reflection;
-updateNotebook();renderMastery();renderList();
+updateNotebook();renderMastery();renderList();const initial=(location.hash||'#atrium').slice(1);go(document.getElementById(initial)?initial:'atrium');
 </script>
 </body>
 </html>
